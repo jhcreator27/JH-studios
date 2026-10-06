@@ -4,6 +4,7 @@ import {
   Project,
   Destination,
   BlogPost,
+  Testimonial,
   ContactRequest,
   MediaItem,
   MenuItem,
@@ -17,6 +18,7 @@ import {
   initialProjects,
   initialDestinations,
   initialBlogPosts,
+  initialTestimonials,
   initialContactRequests,
   initialMediaItems,
   initialMenuItems,
@@ -53,6 +55,11 @@ interface AppContextType {
   addBlogPost: (post: Omit<BlogPost, 'id'>) => void;
   updateBlogPost: (id: string, post: Partial<BlogPost>) => void;
   deleteBlogPost: (id: string) => void;
+
+  testimonials: Testimonial[];
+  addTestimonial: (t: Omit<Testimonial, 'id'>) => void;
+  updateTestimonial: (id: string, t: Partial<Testimonial>) => void;
+  deleteTestimonial: (id: string) => void;
 
   contactRequests: ContactRequest[];
   addContactRequest: (request: Omit<ContactRequest, 'id' | 'date' | 'status'>) => void;
@@ -119,6 +126,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return saved ? JSON.parse(saved) : initialBlogPosts;
   });
 
+  const [testimonials, setTestimonials] = useState<Testimonial[]>(() => {
+    const saved = localStorage.getItem('jh_testimonials');
+    return saved ? JSON.parse(saved) : initialTestimonials;
+  });
+
   const [contactRequests, setContactRequests] = useState<ContactRequest[]>(() => {
     const saved = localStorage.getItem('jh_contacts');
     return saved ? JSON.parse(saved) : initialContactRequests;
@@ -159,6 +171,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   useEffect(() => { localStorage.setItem('jh_projects', JSON.stringify(projects)); }, [projects]);
   useEffect(() => { localStorage.setItem('jh_destinations', JSON.stringify(destinations)); }, [destinations]);
   useEffect(() => { localStorage.setItem('jh_blog', JSON.stringify(blogPosts)); }, [blogPosts]);
+  useEffect(() => { localStorage.setItem('jh_testimonials', JSON.stringify(testimonials)); }, [testimonials]);
   useEffect(() => { localStorage.setItem('jh_contacts', JSON.stringify(contactRequests)); }, [contactRequests]);
   useEffect(() => { localStorage.setItem('jh_media', JSON.stringify(mediaItems)); }, [mediaItems]);
   useEffect(() => { localStorage.setItem('jh_menu', JSON.stringify(menuItems)); }, [menuItems]);
@@ -231,6 +244,22 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const deleteBlogPost = (id: string) => {
     setBlogPosts(blogPosts.filter(b => b.id !== id));
     showToast('Articolo eliminato');
+  };
+
+  const addTestimonial = (data: Omit<Testimonial, 'id'>) => {
+    const newT = { ...data, id: 't_' + Date.now(), visible: true };
+    setTestimonials([newT, ...testimonials]);
+    showToast('Testimonianza aggiunta con successo');
+  };
+
+  const updateTestimonial = (id: string, data: Partial<Testimonial>) => {
+    setTestimonials(testimonials.map(t => t.id === id ? { ...t, ...data } : t));
+    showToast('Testimonianza aggiornata');
+  };
+
+  const deleteTestimonial = (id: string) => {
+    setTestimonials(testimonials.filter(t => t.id !== id));
+    showToast('Testimonianza eliminata');
   };
 
   const addContactRequest = (data: Omit<ContactRequest, 'id' | 'date' | 'status'>) => {
@@ -335,6 +364,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         addBlogPost,
         updateBlogPost,
         deleteBlogPost,
+        testimonials,
+        addTestimonial,
+        updateTestimonial,
+        deleteTestimonial,
         contactRequests,
         addContactRequest,
         updateContactRequestStatus,

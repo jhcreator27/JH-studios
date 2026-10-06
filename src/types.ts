@@ -59,6 +59,7 @@ export interface Testimonial {
   company: string;
   content: string;
   avatar: string;
+  visible?: boolean;
 }
 
 export interface TeamMember {

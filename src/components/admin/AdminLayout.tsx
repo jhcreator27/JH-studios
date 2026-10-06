@@ -7,6 +7,7 @@ import {
   Briefcase,
   Compass,
   BookOpen,
+  MessageSquare,
   Image as ImageIcon,
   Menu as MenuIcon,
   Search,
@@ -25,6 +26,7 @@ import { AdminServices } from './AdminServices';
 import { AdminPortfolio } from './AdminPortfolio';
 import { AdminDestinations } from './AdminDestinations';
 import { AdminBlog } from './AdminBlog';
+import { AdminTestimonials } from './AdminTestimonials';
 import { AdminMedia } from './AdminMedia';
 import { AdminMenu } from './AdminMenu';
 import { AdminSEO } from './AdminSEO';
@@ -48,6 +50,7 @@ export const AdminLayout: React.FC = () => {
     { id: 'admin_portfolio', label: 'Portfolio', icon: Briefcase },
     { id: 'admin_destinations', label: 'Destinazioni', icon: Compass },
     { id: 'admin_blog', label: 'Blog', icon: BookOpen },
+    { id: 'admin_testimonials', label: 'Testimonianze', icon: MessageSquare },
     { id: 'admin_media', label: 'Media Library', icon: ImageIcon },
     { id: 'admin_menu', label: 'Gestione Menu', icon: MenuIcon },
     { id: 'admin_seo', label: 'SEO & Schema', icon: Search },
@@ -61,7 +64,7 @@ export const AdminLayout: React.FC = () => {
       {/* Mobile Sidebar Toggle */}
       <div className="md:hidden flex items-center justify-between p-4 bg-stone-900 border-b border-stone-800">
         <div className="flex items-center gap-2 font-display font-bold text-lg">
-          <Shield className="w-5 h-5 text-amber-500" />
+          <Shield className="w-5 h-5 text-red-500" />
           <span>{generalSettings.agencyName} Admin</span>
         </div>
         <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 text-stone-300">
@@ -74,7 +77,7 @@ export const AdminLayout: React.FC = () => {
         sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
       }`}>
         <div className="p-6 border-b border-stone-800 hidden md:flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-display font-bold">
+          <div className="w-10 h-10 rounded-xl bg-red-600/20 text-red-500 flex items-center justify-center font-display font-bold">
             JH
           </div>
           <div>
@@ -93,7 +96,7 @@ export const AdminLayout: React.FC = () => {
                 onClick={() => { setCurrentView(item.id); setSidebarOpen(false); }}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
                   isActive
-                    ? 'bg-amber-500 text-stone-950 font-semibold shadow-sm'
+                    ? 'bg-red-600 text-stone-950 font-semibold shadow-sm'
                     : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800/60'
                 }`}
               >
@@ -109,7 +112,7 @@ export const AdminLayout: React.FC = () => {
             onClick={() => setCurrentView('home')}
             className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-stone-300 hover:bg-stone-800 transition-colors"
           >
-            <ExternalLink className="w-4 h-4 text-amber-500" />
+            <ExternalLink className="w-4 h-4 text-red-500" />
             <span>Vai al Sito Pubblico</span>
           </button>
           <button
@@ -130,6 +133,7 @@ export const AdminLayout: React.FC = () => {
           {currentView === 'admin_portfolio' && <AdminPortfolio />}
           {currentView === 'admin_destinations' && <AdminDestinations />}
           {currentView === 'admin_blog' && <AdminBlog />}
+          {currentView === 'admin_testimonials' && <AdminTestimonials />}
           {currentView === 'admin_media' && <AdminMedia />}
           {currentView === 'admin_menu' && <AdminMenu />}
           {currentView === 'admin_seo' && <AdminSEO />}

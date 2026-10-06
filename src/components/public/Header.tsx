@@ -81,10 +81,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, onOpenAdminAuth })
 
           <button
             onClick={() => handleNavClick('contact')}
-            className="hidden md:flex items-center gap-2 px-5 py-2.5 text-xs font-semibold tracking-wide text-stone-50 bg-stone-900 dark:bg-stone-100 dark:text-stone-900 rounded-lg hover:bg-stone-800 dark:hover:bg-stone-200 transition-all shadow-sm whitespace-nowrap"
+            className="hidden md:flex items-center gap-2 px-5 py-2.5 text-xs font-semibold tracking-wide text-stone-50 bg-red-600 hover:bg-red-500 dark:bg-red-600 dark:hover:bg-red-500 text-white rounded-lg transition-all shadow-sm whitespace-nowrap"
           >
-            <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-            <span>Parliamo del tuo progetto</span>
+            <Sparkles className="w-3.5 h-3.5 text-stone-950" />
+            <span>Inizia un progetto</span>
           </button>
 
           {/* Mobile menu trigger */}
