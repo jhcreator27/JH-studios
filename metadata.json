@@ -1,0 +1,6 @@
+{
+  "name": "JH studios",
+  "description": "Agenzia creativa e di marketing: Strategia, Comunicazione, Graphic Design, Social Media e Web Design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
