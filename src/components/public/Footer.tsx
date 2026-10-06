@@ -145,8 +145,8 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
           <p>© {new Date().getFullYear()} {generalSettings.agencyName}. Tutti i diritti riservati. P.IVA 12345678901</p>
           <div className="flex items-center gap-6">
+            <button onClick={() => { window.dispatchEvent(new CustomEvent('open-cookie-preferences')); }} className="hover:text-stone-100 transition-colors">Preferenze cookie</button>
             <button onClick={() => { setCurrentView('contact'); window.scrollTo({top:0, behavior:'smooth'}); }} className="hover:text-stone-100 transition-colors">Privacy Policy</button>
-            <button onClick={() => { setCurrentView('contact'); window.scrollTo({top:0, behavior:'smooth'}); }} className="hover:text-stone-100 transition-colors">Cookie Policy</button>
             <button onClick={() => { setCurrentView('contact'); window.scrollTo({top:0, behavior:'smooth'}); }} className="hover:text-stone-100 transition-colors">Termini e Condizioni</button>
           </div>
         </div>
