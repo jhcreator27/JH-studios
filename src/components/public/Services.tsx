@@ -11,11 +11,11 @@ export const Services: React.FC = () => {
       <section className="relative pt-16 md:pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-6 space-y-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-200/80 dark:bg-stone-800 text-stone-800 dark:text-stone-200 text-xs font-medium">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <Sparkles className="w-3.5 h-3.5 text-red-600" />
             <span>I Nostri Servizi</span>
           </div>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight text-stone-900 dark:text-stone-50 max-w-4xl leading-[1.08]">
-            Soluzioni strategiche e creative per <span className="text-amber-600">ogni fase del tuo business.</span>
+            Soluzioni strategiche e creative per <span className="text-red-600">ogni fase del tuo business.</span>
           </h1>
           <p className="text-lg text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
             Dalla pianificazione strategica al web design, dalla gestione social alla fotografia di prodotto: offriamo un ecosistema completo di servizi digitali.
@@ -35,7 +35,7 @@ export const Services: React.FC = () => {
           >
             <div className={`lg:col-span-6 space-y-6 ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
               <div className="flex items-center gap-3">
-                <span className="text-xs font-mono font-semibold text-amber-600 bg-amber-500/10 px-3 py-1 rounded-md">
+                <span className="text-xs font-mono font-semibold text-red-600 bg-red-500/10 px-3 py-1 rounded-md">
                   0{idx + 1}
                 </span>
                 <span className="text-xs text-stone-500 font-medium uppercase tracking-wider">{service.title}</span>
@@ -53,7 +53,7 @@ export const Services: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {service.benefits.map((benefit, bIdx) => (
                     <div key={bIdx} className="flex items-center gap-2.5 text-sm text-stone-700 dark:text-stone-300">
-                      <CheckCircle2 className="w-4 h-4 text-amber-600 shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0" />
                       <span>{benefit}</span>
                     </div>
                   ))}
@@ -105,7 +105,7 @@ export const Services: React.FC = () => {
           </p>
           <button
             onClick={() => setCurrentView('contact')}
-            className="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold rounded-xl text-sm transition-colors shadow-sm inline-flex items-center gap-2"
+            className="px-8 py-4 bg-red-600 hover:bg-red-500 text-stone-950 font-semibold rounded-xl text-sm transition-colors shadow-sm inline-flex items-center gap-2"
           >
             <span>Parla con un consulente</span>
             <ArrowRight className="w-4 h-4" />

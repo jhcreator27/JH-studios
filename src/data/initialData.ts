@@ -517,11 +517,11 @@ export const initialMenuItems: MenuItem[] = [
 export const initialThemeSettings: ThemeSettings = {
   primaryColor: '#0c0a09',
   secondaryColor: '#78716c',
-  accentColor: '#d97706',
+  accentColor: '#dc2626',
   backgroundColor: '#fafaf9',
   fontPrimary: 'Plus Jakarta Sans',
   fontDisplay: 'Syne',
-  borderRadius: '0.75rem',
+  borderRadius: '0.5rem',
   darkMode: false
 };
 

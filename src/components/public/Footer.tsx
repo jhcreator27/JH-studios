@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
           </div>
           {newsletterSubscribed ? (
             <div className="flex items-center gap-3 bg-stone-900 px-6 py-4 rounded-xl border border-stone-700 text-stone-200">
-              <CheckCircle2 className="w-5 h-5 text-amber-500" />
+              <CheckCircle2 className="w-5 h-5 text-red-500" />
               <span className="text-sm font-medium">Iscrizione completata con successo!</span>
             </div>
           ) : (
@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
                 value={newsletterName}
                 onChange={e => setNewsletterName(e.target.value)}
                 required
-                className="px-4 py-3 bg-stone-900 border border-stone-700 rounded-xl text-stone-200 placeholder-stone-500 text-sm focus:outline-none focus:border-amber-500"
+                className="px-4 py-3 bg-stone-900 border border-stone-700 rounded-xl text-stone-200 placeholder-stone-500 text-sm focus:outline-none focus:border-red-500"
               />
               <input
                 type="email"
@@ -49,11 +49,11 @@ export const Footer: React.FC = () => {
                 value={newsletterEmail}
                 onChange={e => setNewsletterEmail(e.target.value)}
                 required
-                className="px-4 py-3 bg-stone-900 border border-stone-700 rounded-xl text-stone-200 placeholder-stone-500 text-sm focus:outline-none focus:border-amber-500"
+                className="px-4 py-3 bg-stone-900 border border-stone-700 rounded-xl text-stone-200 placeholder-stone-500 text-sm focus:outline-none focus:border-red-500"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-stone-950 font-semibold rounded-xl text-sm transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
+                className="px-6 py-3 bg-red-600 hover:bg-red-500 text-stone-950 font-semibold rounded-xl text-sm transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
               >
                 <span>Iscriviti</span>
                 <ArrowRight className="w-4 h-4" />
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-xl font-display font-bold text-stone-100">
               <span>{generalSettings.agencyName}</span>
-              <span className="w-2 h-2 rounded-full bg-amber-600"></span>
+              <span className="w-2 h-2 rounded-full bg-red-600"></span>
             </div>
             <p className="text-stone-400 text-sm leading-relaxed">
               {generalSettings.tagline}
@@ -123,15 +123,15 @@ export const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-stone-100 font-display">Contatti</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-amber-500 shrink-0" />
+                <Mail className="w-4 h-4 text-red-500 shrink-0" />
                 <a href={`mailto:${generalSettings.email}`} className="hover:text-stone-100 transition-colors">{generalSettings.email}</a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-amber-500 shrink-0" />
+                <Phone className="w-4 h-4 text-red-500 shrink-0" />
                 <a href={`tel:${generalSettings.phone}`} className="hover:text-stone-100 transition-colors">{generalSettings.phone}</a>
               </li>
               <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                 <span>{generalSettings.address}</span>
               </li>
               <li className="text-xs text-stone-400 pt-1">

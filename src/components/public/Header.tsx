@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, onOpenAdminAuth })
           className="flex items-center gap-2 text-xl font-display font-bold tracking-tight text-stone-900 dark:text-stone-50 text-left"
         >
           <span>JH studios</span>
-          <span className="w-2 h-2 rounded-full bg-amber-600"></span>
+          <span className="w-2 h-2 rounded-full bg-red-600"></span>
         </button>
 
         {/* Zone 2: 4-6 nav links, single-line */}

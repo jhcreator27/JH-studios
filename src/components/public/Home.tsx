@@ -18,11 +18,11 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-8">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-200/80 dark:bg-stone-800 text-stone-800 dark:text-stone-200 text-xs font-medium">
-                <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                <Sparkles className="w-3.5 h-3.5 text-red-600" />
                 <span>Agenzia Creativa & Digital Strategy</span>
               </div>
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight text-stone-900 dark:text-stone-50 leading-[1.08]">
-                Trasformiamo idee in strategie che <span className="text-amber-600 dark:text-amber-500">lasciano il segno.</span>
+                Trasformiamo idee in strategie che <span className="text-red-600 dark:text-red-500">lasciano il segno.</span>
               </h1>
               <p className="text-lg text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
                 Aiutiamo brand ambiziosi a scalare il mercato attraverso marketing digitale d’eccellenza, branding memorabile, content creation e design d’avanguardia.

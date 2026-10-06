@@ -18,11 +18,11 @@ export const Destinations: React.FC = () => {
       <section className="relative pt-16 md:pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-6 space-y-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-200/80 dark:bg-stone-800 text-stone-800 dark:text-stone-200 text-xs font-medium">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <Sparkles className="w-3.5 h-3.5 text-red-600" />
             <span>Destinazioni & Hub Strategici</span>
           </div>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight text-stone-900 dark:text-stone-50 max-w-4xl leading-[1.08]">
-            I nostri mercati e <span className="text-amber-600">avamposti internazionali.</span>
+            I nostri mercati e <span className="text-red-600">avamposti internazionali.</span>
           </h1>
           <p className="text-lg text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
             Operiamo in Europa attraverso hub strategici dedicati al design, al lusso, alla tecnologia e alla comunicazione istituzionale.
@@ -65,7 +65,7 @@ export const Destinations: React.FC = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-xs text-amber-600 font-semibold">
+                  <div className="flex items-center gap-2 text-xs text-red-600 font-semibold">
                     <MapPin className="w-3.5 h-3.5" />
                     <span>{dest.location}</span>
                   </div>
@@ -78,7 +78,7 @@ export const Destinations: React.FC = () => {
                 <span className="text-xs text-stone-500">{dest.relatedProjects.length} Progetti correlati</span>
                 <button
                   onClick={() => setCurrentView('portfolio')}
-                  className="inline-flex items-center gap-2 text-xs font-semibold text-stone-900 dark:text-stone-100 group-hover:text-amber-600 transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-semibold text-stone-900 dark:text-stone-100 group-hover:text-red-600 transition-colors"
                 >
                   <span>Esplora progetti</span>
                   <ArrowRight className="w-4 h-4" />
