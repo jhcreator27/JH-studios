@@ -19,111 +19,233 @@ export const initialServices: Service[] = [
     id: 's1',
     title: 'Marketing Strategy',
     slug: 'marketing-strategy',
+    category: 'Strategia',
+    number: '01',
     shortDescription: 'Pianificazione strategica omnicanale per accelerare la crescita del brand e massimizzare il ROI.',
-    fullDescription: 'Analizziamo il mercato, i competitor e il target per costruire una roadmap strategica su misura. Definiamo funnel di conversione avanzati, allocazione del budget e KPI di performance misurabili per garantire un posizionamento di successo.',
+    fullDescription: 'Definiamo direzione, obiettivi e posizionamento per trasformare le opportunità in una strategia di marketing concreta.',
     image: '/src/assets/images/hero_marketing_studio_1791274361323.jpg',
     benefits: ['Aumento del ROI pubblicitario', 'Visione di mercato chiara', 'Decisioni basate sui dati'],
     features: ['Analisi Competitor', 'Definizione KPI', 'Funnel di Conversione', 'Media Planning'],
+    problem: 'Spesso le aziende investono in marketing senza una direzione chiara, sprecando budget in azioni non coordinate.',
+    solution: 'Creiamo una roadmap strategica basata su dati di mercato e obiettivi di business misurabili.',
+    process: [
+      { step: '01', title: 'Analisi', desc: 'Studio del mercato, dei competitor e del posizionamento attuale.' },
+      { step: '02', title: 'Strategia', desc: 'Definizione del target, dei canali e della proposta di valore.' },
+      { step: '03', title: 'Piano d’azione', desc: 'Allocazione del budget e creazione della roadmap operativa.' },
+      { step: '04', title: 'Lancio & Ottimizzazione', desc: 'Monitoraggio costante dei KPI e ottimizzazione delle performance.' }
+    ],
+    faqs: [
+      { q: 'Quanto tempo richiede la definizione di una strategia?', a: 'Solitamente dalle 2 alle 4 settimane di analisi e pianificazione approfondita.' },
+      { q: 'È adatta anche per piccole imprese?', a: 'Sì, ogni strategia è sartoriale e tarata sulle risorse e sugli obiettivi specifici.' }
+    ],
     pricePlaceholder: 'A partire da € 2.500'
   },
   {
     id: 's2',
-    title: 'Social Media Management',
-    slug: 'social-media-management',
-    shortDescription: 'Gestione professionale dei canali social per costruire community ingaggiate e autorevoli.',
-    fullDescription: 'Curiamo ogni aspetto della presenza social del tuo brand: dalla stesura del piano editoriale alla produzione di contenuti visivi e testuali di altissimo profilo, monitorando costantemente le metriche di interazione.',
-    image: '/src/assets/images/portfolio_social_1791274381072.jpg',
-    benefits: ['Community fidelizzata', 'Brand awareness costante', 'Tone of voice distintivo'],
-    features: ['Piano Editoriale', 'Copywriting persuasivo', 'Community Management', 'Report Mensili'],
-    pricePlaceholder: 'A partire da € 1.200 / mese'
-  },
-  {
-    id: 's3',
     title: 'Social Media Strategy',
     slug: 'social-media-strategy',
+    category: 'Strategia',
+    number: '02',
     shortDescription: 'Strategie mirate per posizionare il brand sulle piattaforme social con contenuti di valore.',
-    fullDescription: 'Non basta esserci, bisogna saper comunicare. Studiamo strategie organiche e paid studiate per convertire i follower in clienti affezionati, sfruttando i trend e le specificità di ogni piattaforma.',
+    fullDescription: 'Costruiamo una strategia social coerente con il tuo brand, il tuo pubblico e i tuoi obiettivi.',
     image: '/src/assets/images/blog_cover_1791274392023.jpg',
     benefits: ['Posizionamento di mercato', 'Crescita organica mirata', 'Coinvolgimento del pubblico'],
-    features: ['Analisi dei Trend', 'Strategia Editoriale', 'Briefing Creator', 'Analisi Competitiva'],
+    features: ['Analisi dei Canali', 'Target', 'Tone of Voice', 'Piano Editoriale'],
+    problem: 'La mancanza di una strategia social porta a pubblicare contenuti casuali senza generare engagement o lead.',
+    solution: 'Definiamo pilastri editoriali, tone of voice e obiettivi specifici per ogni piattaforma.',
+    process: [
+      { step: '01', title: 'Audit', desc: 'Analisi della presenza social attuale e dei competitor.' },
+      { step: '02', title: 'Strategia', desc: 'Definizione dei pilastri editoriali e del tono di voce.' },
+      { step: '03', title: 'Pianificazione', desc: 'Stesura delle linee guida e del calendario editoriale.' }
+    ],
+    faqs: [
+      { q: 'Quali piattaforme gestite?', a: 'Instagram, LinkedIn, TikTok, Facebook e YouTube a seconda del vostro target.' }
+    ],
     pricePlaceholder: 'A partire da € 1.800'
   },
   {
+    id: 's3',
+    title: 'Digital Strategy',
+    slug: 'digital-strategy',
+    category: 'Strategia',
+    number: '03',
+    shortDescription: 'Visione d’insieme e piani di trasformazione digitale per aziende orientate al futuro.',
+    fullDescription: 'Uniamo strumenti, canali e dati in una strategia digitale coerente costruita intorno agli obiettivi del tuo business.',
+    image: '/src/assets/images/destination_image_1791274400203.jpg',
+    benefits: ['Innovazione d’impresa', 'Processi digitali integrati', 'Vantaggio competitivo duraturo'],
+    features: ['Analisi Digitale', 'Customer Journey', 'Canali Digitali', 'Conversion Strategy'],
+    problem: 'Molte aziende faticano a integrare i canali digitali nel proprio modello di business.',
+    solution: 'Creiamo un ecosistema digitale fluido che unisce presenza online, lead generation e conversioni.',
+    process: [
+      { step: '01', title: 'Assessment', desc: 'Valutazione dell’infrastruttura digitale esistente.' },
+      { step: '02', title: 'Architettura', desc: 'Progettazione della customer journey omnicanale.' },
+      { step: '03', title: 'Implementazione', desc: 'Integrazione dei touchpoint digitali e dei sistemi di tracciamento.' }
+    ],
+    faqs: [
+      { q: 'In cosa differisce dalla marketing strategy?', a: 'La digital strategy si concentra specificamente sull’ecosistema tecnologico e digitale dell’impresa.' }
+    ],
+    pricePlaceholder: 'A partire da € 4.000'
+  },
+  {
     id: 's4',
-    title: 'Graphic Design',
-    slug: 'graphic-design',
-    shortDescription: 'Design visivo d’impatto per comunicare l’identità aziendale con eleganza e coerenza.',
-    fullDescription: 'Creiamo materiali di comunicazione coordinati, presentazioni aziendali, cataloghi, ADV offline e digitali che catturano l’attenzione e riflettono l’eccellenza del vostro marchio.',
-    image: '/src/assets/images/portfolio_branding_1791274372060.jpg',
-    benefits: ['Immagine coordinata impeccabile', 'Comunicazione visiva efficace', 'Distinzione dai competitor'],
-    features: ['Brand Identity', 'Materiali Editoriali', 'Adv Grafiche', 'Infografiche'],
-    pricePlaceholder: 'A partire da € 950'
+    title: 'Social Media Management',
+    slug: 'social-media-management',
+    category: 'Comunicazione',
+    number: '04',
+    shortDescription: 'Gestione professionale dei canali social per costruire community ingaggiate e autorevoli.',
+    fullDescription: 'Gestiamo la presenza del tuo brand sui social trasformando contenuti e community in uno strumento di relazione e crescita.',
+    image: '/src/assets/images/portfolio_social_1791274381072.jpg',
+    benefits: ['Community fidelizzata', 'Brand awareness costante', 'Tone of voice distintivo'],
+    features: ['Gestione profili', 'Calendario editoriale', 'Community Management', 'Report'],
+    problem: 'Mancanza di tempo e risorse interne per pubblicare con costanza e qualità sui social.',
+    solution: 'Ci occupiamo di tutto noi: dalla creazione dei contenuti alla moderazione e ai report mensili.',
+    process: [
+      { step: '01', title: 'Briefing', desc: 'Condivisione degli obiettivi mensili e delle novità aziendali.' },
+      { step: '02', title: 'Produzione', desc: 'Creazione di testi, grafiche e video coordinati.' },
+      { step: '03', title: 'Pubblicazione', desc: 'Gestione delle pubblicazioni e interazione con la community.' }
+    ],
+    faqs: [
+      { q: 'I post vengono approvati prima della pubblicazione?', a: 'Sì, inviamo sempre un calendario di approvazione con 1-2 settimane di anticipo.' }
+    ],
+    pricePlaceholder: 'A partire da € 1.200 / mese'
   },
   {
     id: 's5',
-    title: 'Branding & Identity',
-    slug: 'branding',
-    shortDescription: 'Costruzione di identità di marca memorabili, valoriali e visivamente straordinarie.',
-    fullDescription: 'Dalla scelta del naming alla definizione del logo, delle linee guida visive e della palette cromatica. Diamo un’anima e un volto riconoscibile al vostro business.',
-    image: '/src/assets/images/portfolio_branding_1791274372060.jpg',
-    benefits: ['Riconoscibilità immediata', 'Valore percepito elevato', 'Coerenza su tutti i touchpoint'],
-    features: ['Logo Design', 'Brand Guidelines', 'Typography & Palette', 'Voice of Brand'],
-    pricePlaceholder: 'A partire da € 3.200'
-  },
-  {
-    id: 's6',
     title: 'Content Creation',
     slug: 'content-creation',
+    category: 'Comunicazione',
+    number: '05',
     shortDescription: 'Produzione di contenuti multimediali originali, narrativi ed emozionanti.',
-    fullDescription: 'Scrittura, direzione artistica, produzione video e shooting fotografici pensati per raccontare la storia del brand e stimolare l’azione del pubblico.',
+    fullDescription: 'Creiamo contenuti pensati per raccontare il tuo brand, attirare attenzione e costruire una relazione con il pubblico.',
     image: '/src/assets/images/blog_cover_1791274392023.jpg',
     benefits: ['Contenuti originali e proprietari', 'Coinvolgimento emotivo', 'Versatilità cross-platform'],
-    features: ['Video Commerciali', 'Copywriting narrativo', 'Reels & TikTok', 'Copy & Script'],
+    features: ['Foto', 'Video', 'Reels', 'Copywriting', 'Grafiche'],
+    problem: 'Contenuti ripetitivi o di bassa qualità che non catturano l’attenzione del pubblico.',
+    solution: 'Produciamo materiale multimediale di alto livello stilistico e narrativo.',
+    process: [
+      { step: '01', title: 'Ideazione', desc: 'Concept creativo e storyboard per i contenuti.' },
+      { step: '02', title: 'Shooting', desc: 'Riprese foto/video e creazione copy.' },
+      { step: '03', title: 'Post-produzione', desc: 'Montaggio, color grading e finalizzazione.' }
+    ],
+    faqs: [
+      { q: 'Venite a girare nella nostra sede?', a: 'Sì, organizziamo sessioni di shooting on-site in tutta Italia ed Europa.' }
+    ],
     pricePlaceholder: 'A partire da € 1.500'
   },
   {
-    id: 's7',
-    title: 'Product Photography',
-    slug: 'product-photography',
-    shortDescription: 'Fotografia di prodotto di alta gamma per e-commerce, cataloghi e campagne adv.',
-    fullDescription: 'Valorizziamo ogni dettaglio dei vostri prodotti attraverso still life curati, illuminazione professionale e post-produzione raffinata.',
-    image: '/src/assets/images/portfolio_branding_1791274372060.jpg',
-    benefits: ['Valorizzazione del prodotto', 'Incremento conversioni e-commerce', 'Standard visivi di lusso'],
-    features: ['Still Life', 'Ambientate', 'Post-produzione avanzata', 'Formati ottimizzati web'],
-    pricePlaceholder: 'A partire da € 900'
-  },
-  {
-    id: 's8',
-    title: 'Web Design & UX/UI',
-    slug: 'web-design',
-    shortDescription: 'Siti web e piattaforme digitali sartoriali, veloci, responsive e orientate alla conversione.',
-    fullDescription: 'Progettiamo e sviluppiamo esperienze digitali uniche, unendo un’estetica minimalista ed elegante a performance tecniche impeccabili.',
-    image: '/src/assets/images/destination_image_1791274400203.jpg',
-    benefits: ['Esperienza utente fluida', 'Tassi di conversione superiori', 'Design custom e moderno'],
-    features: ['UI/UX Design', 'Sviluppo Frontend/Backend', 'Ottimizzazione SEO', 'Responsive Design'],
-    pricePlaceholder: 'A partire da € 3.500'
-  },
-  {
-    id: 's9',
-    title: 'Advertising & Performance',
+    id: 's6',
+    title: 'Advertising',
     slug: 'advertising',
+    category: 'Comunicazione',
+    number: '06',
     shortDescription: 'Campagne pubblicitarie mirate su Google, Meta, LinkedIn e TikTok ad alto ritorno.',
-    fullDescription: 'Gestiamo budget pubblicitari con un approccio analitico rigoroso, ottimizzando ogni euro investito per generare lead qualificati e vendite.',
+    fullDescription: "Creiamo campagne pubblicitarie mirate per raggiungere le persone giuste e trasformare l'attenzione in opportunità.",
     image: '/src/assets/images/hero_marketing_studio_1791274361323.jpg',
     benefits: ['Lead qualificati in target', 'Controllo millimetrico del budget', 'Crescita accelerata delle vendite'],
-    features: ['Google Ads', 'Meta ADV', 'LinkedIn Ads', 'A/B Testing continuo'],
+    features: ['Strategia campagne', 'Meta Ads', 'Google Ads', 'Creative Ads'],
+    problem: 'Investimenti pubblicitari in perdita o senza un tracciamento chiaro delle conversioni.',
+    solution: 'Ottimizziamo ogni campagna con un approccio analitico rigoroso e creatività ad alto impatto.',
+    process: [
+      { step: '01', title: 'Setup', desc: 'Configurazione dei pixel, conversioni e pubblico target.' },
+      { step: '02', title: 'Creatività', desc: 'Sviluppo di annunci video e grafici ottimizzati.' },
+      { step: '03', title: 'Ottimizzazione', desc: 'A/B testing e monitoraggio giornaliero delle performance.' }
+    ],
+    faqs: [
+      { q: 'Qual è il budget pubblicitario consigliato?', a: 'Dipende dagli obiettivi, consigliamo un budget adv iniziale di almeno € 1.000/mese.' }
+    ],
     pricePlaceholder: 'A partire da € 1.500 / mese'
   },
   {
-    id: 's10',
-    title: 'Digital Strategy',
-    slug: 'digital-strategy',
-    shortDescription: 'Visione d’insieme e piani di trasformazione digitale per aziende orientate al futuro.',
-    fullDescription: 'Integriamo tecnologia, marketing e processi aziendali per accompagnare l’impresa in un percorso di crescita digitale strutturato e duraturo.',
+    id: 's7',
+    title: 'Graphic Design',
+    slug: 'graphic-design',
+    category: 'Design',
+    number: '07',
+    shortDescription: 'Design visivo d’impatto per comunicare l’identità aziendale con eleganza e coerenza.',
+    fullDescription: 'Trasformiamo idee e messaggi in sistemi visivi capaci di comunicare, distinguersi e rimanere impressi.',
+    image: '/src/assets/images/portfolio_branding_1791274372060.jpg',
+    benefits: ['Immagine coordinata impeccabile', 'Comunicazione visiva efficace', 'Distinzione dai competitor'],
+    features: ['Logo', 'Brochure', 'Packaging', 'Presentazioni', 'Social graphics'],
+    problem: 'Materiali di comunicazione disomogenei e poco professionali che svalutano l’immagine aziendale.',
+    solution: 'Progettiamo artefatti grafici raffinati e coerenti con i più alti standard estetici.',
+    process: [
+      { step: '01', title: 'Briefing', desc: 'Raccolta delle esigenze e dei riferimenti visivi.' },
+      { step: '02', title: 'Boze', desc: 'Sviluppo di concept grafici preliminari.' },
+      { step: '03', title: 'Esecutiva', desc: 'Finalizzazione di tutti i file pronti per la stampa o il digital.' }
+    ],
+    faqs: [
+      { q: 'Ricevo i file sorgente?', a: 'Sì, consegniamo tutti i file esecutivi e sorgenti in formato vettoriale.' }
+    ],
+    pricePlaceholder: 'A partire da € 950'
+  },
+  {
+    id: 's8',
+    title: 'Branding',
+    slug: 'branding',
+    category: 'Design',
+    number: '08',
+    shortDescription: 'Costruzione di identità di marca memorabili, valoriali e visivamente straordinarie.',
+    fullDescription: 'Costruiamo identità di marca riconoscibili, coerenti e capaci di creare una relazione autentica con il pubblico.',
+    image: '/src/assets/images/portfolio_branding_1791274372060.jpg',
+    benefits: ['Riconoscibilità immediata', 'Valore percepito elevato', 'Coerenza su tutti i touchpoint'],
+    features: ['Brand identity', 'Logo design', 'Palette', 'Typography', 'Brand guidelines'],
+    problem: 'Un brand privo di identità definita fatica a farsi ricordare e a giustificare prezzi premium.',
+    solution: 'Creiamo brand identity uniche che riflettono l’essenza e l’ambizione dell’impresa.',
+    process: [
+      { step: '01', title: 'Discovery', desc: 'Analisi dei valori, della visione e dei competitor.' },
+      { step: '02', title: 'Identity', desc: 'Creazione del logo, palette cromatica e tipografia.' },
+      { step: '03', title: 'Guidelines', desc: 'Stesura del manuale di brand per l’utilizzo corretto.' }
+    ],
+    faqs: [
+      { q: 'Cosa include il brand book?', a: 'Linee guida complete su logo, colori, font, tone of voice e applicazioni pratiche.' }
+    ],
+    pricePlaceholder: 'A partire da € 3.200'
+  },
+  {
+    id: 's9',
+    title: 'Web Design',
+    slug: 'web-design',
+    category: 'Design',
+    number: '09',
+    shortDescription: 'Siti web e piattaforme digitali sartoriali, veloci, responsive e orientate alla conversione.',
+    fullDescription: 'Progettiamo esperienze digitali moderne, intuitive e responsive che trasformano la presenza online in uno strumento di business.',
     image: '/src/assets/images/destination_image_1791274400203.jpg',
-    benefits: ['Innovazione d’impresa', 'Processi digitali integrati', 'Vantaggio competitivo duraturo'],
-    features: ['Audit Digitale', 'Roadmap Strategica', 'Integrazione Canali', 'Formazione Team'],
-    pricePlaceholder: 'A partire da € 4.000'
+    benefits: ['Esperienza utente fluida', 'Tassi di conversione superiori', 'Design custom e moderno'],
+    features: ['UX/UI', 'Landing page', 'Siti aziendali', 'Design system', 'Responsive design'],
+    problem: 'Un sito web lento, obsoleto o difficile da navigare che allontana i potenziali clienti.',
+    solution: 'Realizziamo siti web d’eccellenza, ottimizzati per la conversione e curati in ogni dettaglio UX.',
+    process: [
+      { step: '01', title: 'Wireframe', desc: 'Definizione dell’architettura informativa e dei flussi utente.' },
+      { step: '02', title: 'UI Design', desc: 'Progettazione visiva sartoriale in alta definizione.' },
+      { step: '03', title: 'Sviluppo', desc: 'Coding responsive, performante e SEO-friendly.' }
+    ],
+    faqs: [
+      { q: 'Il sito è modificabile in autonomia?', a: 'Sì, integriamo pannelli di gestione intuitivi per permetterti di aggiornare i contenuti.' }
+    ],
+    pricePlaceholder: 'A partire da € 3.500'
+  },
+  {
+    id: 's10',
+    title: 'Product Photography',
+    slug: 'product-photography',
+    category: 'Visual',
+    number: '10',
+    shortDescription: 'Fotografia di prodotto di alta gamma per e-commerce, cataloghi e campagne adv.',
+    fullDescription: 'Fotografiamo i tuoi prodotti valorizzandone estetica, dettagli e personalità attraverso immagini professionali.',
+    image: '/src/assets/images/portfolio_branding_1791274372060.jpg',
+    benefits: ['Valorizzazione del prodotto', 'Incremento conversioni e-commerce', 'Standard visivi di lusso'],
+    features: ['Still life', 'E-commerce', 'Social content', 'Lifestyle', 'Post-produzione'],
+    problem: 'Foto amatoriali o scarse che non rendono giustizia alla qualità dei prodotti.',
+    solution: 'Realizziamo still life e scatti ambientati di altissima qualità commerciale.',
+    process: [
+      { step: '01', title: 'Set Design', desc: 'Studio dell’illuminazione e della scenografia.' },
+      { step: '02', title: 'Shooting', desc: 'Scatti di prodotto da molteplici angolazioni.' },
+      { step: '03', title: 'Ritocco', desc: 'Post-produzione avanzata e scontorno professionale.' }
+    ],
+    faqs: [
+      { q: 'Dobbiamo spedirvi i prodotti?', a: 'Sì, i prodotti vanno spediti al nostro studio fotografico per la sessione.' }
+    ],
+    pricePlaceholder: 'A partire da € 900'
   }
 ];
 

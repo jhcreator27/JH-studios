@@ -11,6 +11,8 @@ export const AdminServices: React.FC = () => {
   const [formData, setFormData] = useState({
     title: '',
     slug: '',
+    category: 'Strategia' as 'Strategia' | 'Comunicazione' | 'Design' | 'Visual',
+    number: '11',
     shortDescription: '',
     fullDescription: '',
     image: '',
@@ -25,6 +27,8 @@ export const AdminServices: React.FC = () => {
     setFormData({
       title: '',
       slug: '',
+      category: 'Strategia',
+      number: '11',
       shortDescription: '',
       fullDescription: '',
       image: '/src/assets/images/hero_marketing_studio_1791274361323.jpg',
@@ -40,6 +44,8 @@ export const AdminServices: React.FC = () => {
     setFormData({
       title: s.title,
       slug: s.slug,
+      category: s.category || 'Strategia',
+      number: s.number || '11',
       shortDescription: s.shortDescription,
       fullDescription: s.fullDescription,
       image: s.image,
@@ -54,6 +60,8 @@ export const AdminServices: React.FC = () => {
     const payload = {
       title: formData.title,
       slug: formData.slug || formData.title.toLowerCase().replace(/\s+/g, '-'),
+      category: formData.category,
+      number: formData.number,
       shortDescription: formData.shortDescription,
       fullDescription: formData.fullDescription,
       image: formData.image || '/src/assets/images/hero_marketing_studio_1791274361323.jpg',

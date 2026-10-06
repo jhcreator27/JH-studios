@@ -2,11 +2,17 @@ export interface Service {
   id: string;
   title: string;
   slug: string;
+  category: 'Strategia' | 'Comunicazione' | 'Design' | 'Visual';
+  number: string;
   shortDescription: string;
   fullDescription: string;
   image: string;
   benefits: string[];
   features: string[];
+  problem?: string;
+  solution?: string;
+  process?: { step: string; title: string; desc: string }[];
+  faqs?: { q: string; a: string }[];
   pricePlaceholder?: string;
 }
 
